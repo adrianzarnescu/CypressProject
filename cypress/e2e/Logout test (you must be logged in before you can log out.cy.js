@@ -6,15 +6,13 @@ describe('Logout test (you must be logged in before you can log out)', () => {
         cy.get('[data-test="username"]').type('standard_user');  
         cy.get('[data-test="password"]').type('secret_sauce');    
 
-        cy.get('data-test="login-button"').click();
+        cy.get('[data-test="login-button"]').click();
 
         cy.url().should('include', '/inventory.html');
 
        
-        cy.get('.data-test="login-button"').should('be.visible');  
-
         
-        cy.get('data-test="login-button"').click();
+        cy.get('[data-test="login-button"]').click();
 
         cy.get('#logout_sidebar_link').click();
 
