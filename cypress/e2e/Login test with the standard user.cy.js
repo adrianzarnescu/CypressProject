@@ -1,8 +1,8 @@
+
 describe('Login test with the standard user (check if you are logged in afterwards)', () => {
 
     it('It should log in with the standard user and verify that the login is successful', () => {
         cy.visit('https://www.saucedemo.com/');
-
         cy.get('[data-test="username"]').type('standard_user'); 
         cy.get('[data-test="password"]').type('secret_sauce');  
 
